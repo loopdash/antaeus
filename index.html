@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antaeus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #DED2E1;
+            font-family: "DM Sans", sans-serif;
+            text-align: center;
+            padding: 2rem;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 90vw;
+        }
+
+        /* Keyframes for fade-in up animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Apply animation */
+        .logo, .title, .button {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s ease forwards;
+        }
+
+        .logo {
+            width: 45vw;
+            max-width: 768px;
+            height: auto;
+            animation-delay: 0.1s;
+        }
+
+        .title {
+            font-size: clamp(1.8rem, 5vw, 2.85rem); /* Scales with viewport */
+            font-weight: 800;
+            color: #191e04;
+            text-transform: uppercase;
+            max-width: 45vw;
+            text-wrap: balance;
+            margin-top: 10px;
+            animation-delay: 0.2s;
+            margin-bottom: 20px;
+        }
+
+        .button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          font-family: "DM Sans", sans-serif;
+          font-size: clamp(0.875rem, 1.2vw, 1rem);
+          font-weight: 800;
+          line-height: 1;
+          text-transform: uppercase;
+          color: #514853;
+          text-decoration: none;
+          padding: 14px 28px;
+          border: 1px solid #c5b7c8;
+          border-radius: 43px;
+          cursor: pointer;
+          width: fit-content;
+          max-width: 100%;
+          background: linear-gradient(172deg, #ded2e1, #c5b7c8);
+          box-shadow: rgba(0, 0, 0, 0.01) 0px 5px 10px, rgba(0, 0, 0, 0.01) 0px 2px 7px inset, rgba(255, 255, 255, 0.3) 0px 4px 7px inset;
+          transform: translateY(0px);
+          animation-delay: 0.3s;
+          transition: all 0.333s ease-in-out;
+        }
+
+        .button:hover {
+          transition: all 0.333s ease-in-out;
+          background: linear-gradient(172deg, #ded2e1, #9e8da2);
+          box-shadow: rgba(0, 0, 0, 0.03) 0px 5px 10px, rgba(0, 0, 0, 0.03) 0px 2px 7px inset, rgba(255, 255, 255, 0.3) 0px 4px 7px inset;
+        }
+
+        .button:active {
+            background-color: #d9cddc;
+        }
+
+        .button:focus {
+            outline: 2px solid #b9a3bb;
+            outline-offset: 2px;
+        }
+
+        @media (max-width: 1400px) {
+            .title {
+                max-width: 80vw; 
+                font-size: clamp(1.8rem, 5vw, 3.05rem);
+            }
+            .logo {
+                width: 70vw;
+            }
+        }
+        @media (max-width: 1024px) {
+            .title {
+                max-width: 70vw; 
+                font-size: clamp(1.8rem, 5vw, 2.35rem);
+            }
+            .logo {
+                width: 70vw;
+            }
+        }
+        @media (max-width: 768px) {
+            .title {
+                max-width: 80vw;
+                font-size: clamp(1.5rem, 5vw, 2rem);
+            }
+            .logo {
+                width: 80vw;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .title {
+                font-size: 1.5rem;
+            }
+            .button {
+                font-size: 1rem;
+                padding: 10px 18px;
+            }
+            .logo {
+                width: 80vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg class="logo" width="528" height="201" viewBox="0 0 528 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_22_56)">
+          <path d="M28.3798 197.816H0.204102L25.4293 3.18433H61.1209L86.3461 197.816H57.0958L53.0707 152.984H32.4049L28.3798 197.816ZM34.5541 129.359H50.9215L43.4055 38.3538H42.8713L34.5541 129.359Z" fill="#191E01"/>
+          <path d="M109.963 3.18433L138.946 100.901H139.48V3.18433H164.171V197.816H145.921L114.789 96.0728H114.255V197.816H89.2966V3.18433H109.963Z" fill="#191E01"/>
+          <path d="M236.088 3.18433V31.3696H216.23V197.809H187.781V31.3696H167.656V3.18433H236.088Z" fill="#191E01"/>
+          <path d="M252.462 197.816H224.286L249.505 3.18433H285.197L310.422 197.816H281.172L277.147 152.984H256.481L252.456 197.816H252.462ZM258.63 129.359H274.998L267.482 38.3538H266.947L258.63 129.359Z" fill="#191E01"/>
+          <path d="M372.687 3.18433V31.643H342.095V83.1856H366.245V108.419H342.095V169.624H374.029V197.809H313.379V3.18433H372.687Z" fill="#191E01"/>
+          <path d="M453.462 3.18433V149.492C453.462 186.271 440.045 200.5 415.621 200.5C391.197 200.5 377.78 186.538 377.78 150.3V3.18433H406.496V150.3C406.496 167.748 409.714 171.24 415.621 171.24C421.528 171.24 425.013 167.748 425.013 150.3V3.18433H453.462Z" fill="#191E01"/>
+          <path d="M526.995 47.2083L504.186 51.7691C502.31 32.1712 499.086 27.8775 493.719 27.8775C488.352 27.8775 485.936 32.979 485.936 46.9349C485.936 83.4465 527.802 95.7931 527.802 148.143C527.802 181.697 514.385 200.494 492.11 200.494C473.059 200.494 458.027 184.121 456.686 151.903L481.11 147.609C482.718 169.084 487.011 173.383 491.843 173.383C497.744 173.383 499.893 168.015 499.893 155.128C499.893 108.687 457.493 99.2914 457.493 49.3582C457.493 22.2417 469.301 0.5 492.11 0.5C514.919 0.5 523.777 18.4886 527.001 47.2083H526.995Z" fill="#191E01"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_22_56">
+          <rect width="527.592" height="200" fill="white" transform="translate(0.204102 0.5)"/>
+          </clipPath>
+          </defs>
+        </svg>
+        <h1 class="title">Big battles need bold moves.</h1>
+        <button class="button" onclick="window.location.href='mailto:info@antaeusaction.com'">
+            Let's get to work
+        </button>
+    </div>
+</body>
+</html>
